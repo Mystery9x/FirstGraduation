@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GraduationThesis4211036"
+             x:DataType="local:ViewModels.RouteDetailViewModel"
+             x:Class="GraduationThesis4211036.Views.RouteDetailPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="8">
+            <Label Text="Tên tuyến đường:" FontSize="{StaticResource TitleFontSize}"/>
+            <Entry Placeholder="2023-07-12-00-50-59" Text="{Binding Route.Name}" FontSize="{StaticResource ToolTipFontSize}"/>
+            <Label Text="Mô tả" FontSize="{StaticResource TitleFontSize}"/>
+            <Entry Placeholder="Viết mô tả" Text="{Binding Route.Description}" FontSize="{StaticResource ToolTipFontSize}"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Tọa độ điểm:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.RouteWaypoint}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Điểm tuyến đường:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.TrackPoint}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Giờ bắt đầu:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.StartTime}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Giờ kết thúc:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.EndTime}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Điểm bắt đầu:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.StartAt}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Điểm kết thúc:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.EndAt}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Tải lên OpenStreetMap:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.OpenStreetMap}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Đã xuất ra:" FontSize="{StaticResource TitleFontSize}"/>
+                <Label Text="{Binding Route.Exported}" FontSize="{StaticResource ToolTipFontSize}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Button Text="Hủy" WidthRequest="162" Command="{Binding CancelCommand}"/>
+                <Button Text="Lưu" WidthRequest="162" Command="{Binding SaveCommand}" BackgroundColor="{StaticResource Primary}" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

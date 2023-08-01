@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GraduationThesis4211036.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#FFB341</Color>
+            <Color x:Key="Background">#FFFFFF</Color>
+            <Color x:Key="PopupBackground">#FF333333</Color>
+            <Color x:Key="NavColor">#FFBBBBBB</Color>
+            <Color x:Key="TitleColor">#FF222222</Color>
+            <Color x:Key="InvertTitleColor">#FFF</Color>
+            <x:Double x:Key="HeaderFontSize">20</x:Double>
+            <x:Double x:Key="TitleFontSize">18</x:Double>
+            <x:Double x:Key="ToolTipFontSize">14</x:Double>
+            <Style ApplyToDerivedTypes="true" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Key=Primary}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource Key=InvertTitleColor}"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource NavColor}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

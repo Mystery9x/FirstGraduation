@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GraduationThesis4211036"
+             x:DataType="local:ViewModels.SettingViewModel"
+             x:Class="GraduationThesis4211036.Views.SettingPage">
+    <ContentPage.Content>
+        <ScrollView Padding="8">
+            <StackLayout Orientation="Vertical">
+                <Label Text="Khoảng thời gian ghi âm:" FontSize="{StaticResource TitleFontSize}"/>
+                <Picker
+                HorizontalOptions="FillAndExpand"
+                FontSize="{StaticResource ToolTipFontSize}"
+                Title="Khoảng thời gian ghi âm (giây)"
+            >
+                    <Picker.Items>
+                        <x:String>2 giây</x:String>
+                        <x:String>3 giây</x:String>
+                        <x:String>4 giây</x:String>
+                        <x:String>5 giây</x:String>
+                        <x:String>10 giây</x:String>
+                        <x:String>20 giây</x:String>
+                        <x:String>30 giây</x:String>
+                    </Picker.Items>
+                </Picker>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Bật âm thanh" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label WidthRequest="300" Text="Phát ra âm thanh khi băt đầu và kết thúc ghi âm" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsEnableSound}" />
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                 BackgroundColor="Black"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Ghi lịch sử áp suất khí quyển" FontSize="{StaticResource TitleFontSize}"/>
+                    <Label Text="Thao tác này yêu cầu khởi động lại ứng dụng" FontSize="{StaticResource ToolTipFontSize}"/>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Đặt lại xác thực OSM" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+                        <Label WidthRequest="300" Text="Quên các định danh và quyền lực OSM và bắt GraduationThesis phải hỏi lại " FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsRequireTrackRestart}"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <Label Text="GPS" Margin="0,24,0,0" TextColor="{StaticResource Primary}" FontSize="{StaticResource TitleFontSize}"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Cài đặt GPS" FontSize="{StaticResource TitleFontSize}"/>
+                    <Label Text="Hiện màn hình cài đặt GPS của hệ thống" FontSize="{StaticResource ToolTipFontSize}"/>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Kiểm tra GPS khi khởi động" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+                        <Label WidthRequest="300" Text="Kiểm tra GPS có tắt khi khởi động và đề nghị bật nó lên" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsRequireTrackRestart}"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Bỏ qua đồng hồ GPS" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+                        <Label WidthRequest="300" Text="Bỏ qua đồng hồ GPS và lấy ngày giờ từ đồng hồ Android" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsRequireTrackRestart}"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Khoảng ghi GPS" FontSize="{StaticResource TitleFontSize}"/>
+                    <Entry Placeholder="0 giây. Sử dụng 0 để ghi liên tục" 
+                           FontSize="{StaticResource TitleFontSize}"
+                           Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Khoảng cách ghi lịch sử GPS" FontSize="{StaticResource TitleFontSize}"/>
+                    <Entry Placeholder="0 m, Biên độ tối thiểu để kiểm tra GPS. Để 0 tương ứng với khoảng cách nhỏ nhất để kiểm tra GPS"
+                            FontSize="{StaticResource TitleFontSize}"
+                           Keyboard="Numeric"/>
+                </StackLayout>
+                <Label Text="Tùy chọn GPX" Margin="0,24,0,0" TextColor="{StaticResource Primary}" FontSize="{StaticResource TitleFontSize}"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Thư mục lưu trữ ở bộ nhớ ngoài" FontSize="{StaticResource TitleFontSize}"/>
+                    <Entry Placeholder="/tracker" FontSize="{StaticResource TitleFontSize}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Mỗi tuyến đường một thư mục" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+                        <Label WidthRequest="300" Text="Lưu mỗi tuyến đường và các tập tin liên quan vào mỗi thư mục riêng" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsRequireTrackRestart}"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Tên tập tin của tuyến đường có tên:" FontSize="{StaticResource TitleFontSize}"/>
+                    <Picker
+                HorizontalOptions="FillAndExpand"
+                FontSize="{StaticResource ToolTipFontSize}"
+                Title="Tên tập tin của tuyến đường đã được đặt tên"
+            >
+                        <Picker.Items>
+                            <x:String>Tên theo giõi</x:String>
+                            <x:String>Tên, thời gian bắt đầu và kết thúc</x:String>
+                            <x:String>Thời gian bắt đầu và kết thúc</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Độ chính xác trong tập tin GPX:" FontSize="{StaticResource TitleFontSize}"/>
+                    <Picker
+                HorizontalOptions="FillAndExpand"
+                FontSize="{StaticResource ToolTipFontSize}"
+                Title="Khoảng thời gian ghi âm (giây)"
+            >
+                        <Picker.Items>
+                            <x:String>Không lựa chọn</x:String>
+                            <x:String>Với tên tọa độ</x:String>
+                            <x:String>Trong bình luận tọa độ</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Ước lượng HDOP" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+                        <Label WidthRequest="300" Text="Điền HDOP trong GPX với giá trị ước lượng theo độ chính xác" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsRequireTrackRestart}"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Xuất tiêu đề la bàn" FontSize="{StaticResource TitleFontSize}"/>
+                    <Picker
+                HorizontalOptions="FillAndExpand"
+                FontSize="{StaticResource ToolTipFontSize}"
+                Title="Chỉ định cách xuất tiêu đề la bàn"
+            >
+                        <Picker.Items>
+                            <x:String>Không lựa chọn</x:String>
+                            <x:String>Trong comment</x:String>
+                            <x:String>Trong phần mở rộng</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <Label Text="Giao diện người dùng" Margin="0,24,0,0" TextColor="{StaticResource Primary}" FontSize="{StaticResource TitleFontSize}"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Nguồn hình ảnh mặc định" FontSize="{StaticResource TitleFontSize}"/>
+                    <Picker
+                HorizontalOptions="FillAndExpand"
+                FontSize="{StaticResource ToolTipFontSize}"
+                Title="Lấy hình ảnh từ máy ảnh hoặc thư viện?"
+            >
+                        <Picker.Items>
+                            <x:String>Không lựa chọn</x:String>
+                            <x:String>Trong comment</x:String>
+                            <x:String>Trong phần mở rộng</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Luôn bật màn hình" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+                        <Label WidthRequest="300" Text="Màn hình sẽ luôn bật trong việc theo dõi. Tắt để tiết kiệm pin" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsRequireTrackRestart}"/>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                     BackgroundColor="Black"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Giao diện màn hình chính" FontSize="{StaticResource TitleFontSize}"/>
+                    <Picker
+                HorizontalOptions="FillAndExpand"
+                FontSize="{StaticResource ToolTipFontSize}"
+                Title="Tùy chọn sẽ được áp dụng sau khi khởi động lại ứng dụng"
+            >
+                        <Picker.Items>
+                            <x:String>Không lựa chọn</x:String>
+                            <x:String>Trong comment</x:String>
+                            <x:String>Trong phần mở rộng</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Thư mục lưu trữ ở bộ nhớ ngoài" FontSize="{StaticResource TitleFontSize}"/>
+                    <Label Text="Xuất tiêu đề la bàn" FontSize="{StaticResource TitleFontSize}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Phím tắt" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label WidthRequest="300" Text="Chọn bộ nút tùy biến (xem tài liệu)" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsEnableSound}" />
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                 BackgroundColor="Black"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Bản đồ nền" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label WidthRequest="300" Text="Phát ra âm thanh khi băt đầu và kết thúc ghi âm" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsEnableSound}" />
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                 BackgroundColor="Black"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Bật âm thanh" FontSize="{StaticResource TitleFontSize}"/>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <Label WidthRequest="300" Text="Phát ra âm thanh khi băt đầu và kết thúc ghi âm" FontSize="{StaticResource ToolTipFontSize}"/>
+                        <CheckBox IsChecked="{Binding IsEnableSound}" />
+                    </StackLayout>
+                </StackLayout>
+                <BoxView HeightRequest="1"
+                 BackgroundColor="Black"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="End" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Định hướng màn hình" FontSize="{StaticResource TitleFontSize}"/>
+                    <Picker
+                HorizontalOptions="FillAndExpand"
+                FontSize="{StaticResource ToolTipFontSize}"
+                Title="Hiện bản đồ OpenStreetMap ở dưới tuyến đường"
+            >
+                        <Picker.Items>
+                            <x:String>Không lựa chọn</x:String>
+                            <x:String>Trong comment</x:String>
+                            <x:String>Trong phần mở rộng</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

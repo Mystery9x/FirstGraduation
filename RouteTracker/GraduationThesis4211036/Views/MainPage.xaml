@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GraduationThesis4211036"
+             xmlns:model="clr-namespace:GraduationThesis4211036.Models"
+             x:DataType="local:ViewModels.MainViewModel"
+             x:Class="GraduationThesis4211036.Views.MainPage"
+>
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="8">
+            <Grid AbsoluteLayout.LayoutFlags="All"
+                Padding="60"
+                AbsoluteLayout.LayoutBounds="0,0,1,1" IsVisible="{Binding IsHaveNoRoute}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="empty_list_route.png" Aspect="AspectFit"/>
+            </Grid>
+            <ScrollView AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <CollectionView 
+                        ItemsSource="{Binding Routes}"
+                        SelectedItem="{Binding SelectedRoute}"
+                        SelectionMode="Single"
+                        >
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="model:Route">
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Id}"/>
+                                        <Label Text=","/>
+                                        <Label Text="{Binding Name}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Tọa độ điểm : "/>
+                                        <Label Text="{Binding RouteWaypoint}" Margin="0,0,0,3"/>
+                                        <Label Text="Vị trí tuyến đường: " Margin="0,0,0,5"/>
+                                        <Label Text="{Binding TrackPoint}" Margin="0,0,0,3"/>
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1"
+                                     BackgroundColor="Black"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="End" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+            </ScrollView>
+            <Button 
+                CornerRadius="1000"
+                BackgroundColor="{StaticResource Primary}"
+                AbsoluteLayout.LayoutFlags="PositionProportional"  
+                AbsoluteLayout.LayoutBounds=".97,.93,60,60"
+                Text="+"
+                Command="{Binding AddNewRouteCommand}"
+                FontSize="18"
+                TextColor="White"
+            />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

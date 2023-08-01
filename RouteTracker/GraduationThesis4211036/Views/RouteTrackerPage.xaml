@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GraduationThesis4211036"
+             x:DataType="local:ViewModels.RouteTrackerViewModel"
+             x:Class="GraduationThesis4211036.Views.RouteTrackerPage">
+    <ContentPage.Content>
+        <StackLayout Padding="8">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Label Text="Chức năng" 
+                               FontSize="{StaticResource TitleFontSize}" Margin="0,22" WidthRequest="300"/>
+                        <Button Text="{Binding ToggleGridFunctionText, Mode=OneWay}" Command="{Binding ToggleShowGridFunctionCommand}" Padding="1" HorizontalOptions="Center" Margin="0,20" HeightRequest="20"/>
+                    </StackLayout>
+                    <Grid IsVisible="{Binding IsShowGridFunction}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Row="0" Grid.Column="0" Margin="6,6,3,3" Source="btn_function_record.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="1" Margin="3,6,6,3" Source="btn_function_take_a_photo.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_function_note.png"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Label Text="Xe cộ" 
+                               FontSize="{StaticResource TitleFontSize}" Margin="0,22" WidthRequest="300"/>
+                        <Button Text="{Binding ToggleGridVehicleText, Mode=OneWay}" Command="{Binding ToggleShowGridVehicleCommand}" Padding="1" HorizontalOptions="Center" Margin="0,20" HeightRequest="20"/>
+                    </StackLayout>
+                    <Grid IsVisible="{Binding IsShowGridVehicle}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Row="0" Grid.Column="0" Margin="6,6,3,3" Source="btn_vehicle_gas_station.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="1" Margin="3,6,6,3" Source="btn_vehicle_parking.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_vehicle_emgergency_phone.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="3" Margin="6,6,3,3" Source="btn_vehicle_speed_machine.png"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Label Text="Địa điểm" 
+                               FontSize="{StaticResource TitleFontSize}" Margin="0,22" WidthRequest="300"/>
+                        <Button Text="{Binding ToggleGridLocationText, Mode=OneWay}" Command="{Binding ToggleShowGridLocationCommand}" Padding="1" HorizontalOptions="Center" Margin="0,20" HeightRequest="20"/>
+                    </StackLayout>
+                    <Grid IsVisible="{Binding IsShowGridLocation}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Row="0" Grid.Column="0" Margin="6,6,3,3" Source="btn_location_grocery_store.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="1" Margin="3,6,6,3" Source="btn_location_school.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_location_library.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="3" Margin="6,6,3,3" Source="btn_location_musium.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="0" Margin="6,6,3,3" Source="btn_location_hospital.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="1" Margin="3,6,6,3" Source="btn_location_drugstore.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="2" Margin="3,6,6,3" Source="btn_location_dock.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="3" Margin="6,6,3,3" Source="btn_location_memorial.png"/>
+                        <ImageButton Grid.Row="2" Grid.Column="0" Margin="6,6,3,3" Source="btn_location_bank.png"/>
+                        <ImageButton Grid.Row="2" Grid.Column="1" Margin="3,6,6,3" Source="btn_location_hotel.png"/>
+                        <ImageButton Grid.Row="2" Grid.Column="2" Margin="3,6,6,3" Source="btn_location_church.png"/>
+                        <ImageButton Grid.Row="2" Grid.Column="3" Margin="6,6,3,3" Source="btn_location_threaster.png"/>
+                        <ImageButton Grid.Row="3" Grid.Column="0" Margin="6,6,3,3" Source="btn_location_airport.png"/>
+                        <ImageButton Grid.Row="3" Grid.Column="1" Margin="3,6,6,3" Source="btn_location_factory.png"/>
+                        <ImageButton Grid.Row="3" Grid.Column="2" Margin="3,6,6,3" Source="btn_location_playground.png"/>
+                        <ImageButton Grid.Row="3" Grid.Column="3" Margin="6,6,3,3" Source="btn_location_castle.png"/>
+                        <ImageButton Grid.Row="4" Grid.Column="0" Margin="6,6,3,3" Source="btn_location_supermarket.png"/>
+                        <ImageButton Grid.Row="4" Grid.Column="1" Margin="3,6,6,3" Source="btn_location_post_office.png"/>
+                        <ImageButton Grid.Row="4" Grid.Column="2" Margin="3,6,6,3" Source="btn_location_gym.png"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Label Text="Hạn chế" 
+                               FontSize="{StaticResource TitleFontSize}" Margin="0,22" WidthRequest="300"/>
+                        <Button Text="{Binding ToggleGridRestrictText, Mode=OneWay}" Command="{Binding ToggleShowGridRestrictCommand}" Padding="1" HorizontalOptions="Center" Margin="0,20" HeightRequest="20"/>
+                    </StackLayout>
+                    <Grid IsVisible="{Binding IsShowGridRestrict}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Row="0" Grid.Column="0" Margin="6,6,3,3" Source="btn_restrict_light_traffic.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="1" Margin="3,6,6,3" Source="btn_restrict_one_diretion.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_restrict_dead_end.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="3" Margin="6,6,3,3" Source="btn_restrict_max_50.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="0" Margin="6,6,3,3" Source="btn_restrict_max_80.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="1" Margin="3,6,6,3" Source="btn_restrict_max_100.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="2" Margin="3,6,6,3" Source="btn_restrict_max_110.png"/>
+                        <ImageButton Grid.Row="1" Grid.Column="3" Margin="6,6,3,3" Source="btn_restrict_max_120.png"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Label Text="Lối đi" 
+                               FontSize="{StaticResource TitleFontSize}" Margin="0,22" WidthRequest="300"/>
+                        <Button Text="{Binding ToggleGridWayText, Mode=OneWay}" Command="{Binding ToggleShowGridWayCommand}" Padding="1" HorizontalOptions="Center" Margin="0,20" HeightRequest="20"/>
+                    </StackLayout>
+                    <Grid IsVisible="{Binding IsShowGridWay}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_way_bridge.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_way_road.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="1" Margin="3,6,6,3" Source="btn_way_bike_path.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_way_stair.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_way_high_way.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Margin="3,6,6,3" Source="btn_way_crosswark.png"/>
+                        <ImageButton Grid.Row="0" Grid.Column="0" Margin="6,6,3,3" Source="btn_way_corner.png"/>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
