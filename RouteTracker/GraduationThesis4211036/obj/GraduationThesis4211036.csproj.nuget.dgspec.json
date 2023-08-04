@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj": {}
+    "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj": {}
   },
   "projects": {
-    "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj": {
+    "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj",
+        "projectUniqueName": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj",
         "projectName": "GraduationThesis4211036",
-        "projectPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj",
+        "projectPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj",
         "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036\\obj\\",
+        "outputPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

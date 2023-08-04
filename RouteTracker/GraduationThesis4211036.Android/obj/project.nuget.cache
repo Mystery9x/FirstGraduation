@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ksQI8bTsSfSfgRFCmu/x16wHwF3G/Ul9cmi05azWxoHVr7jLzbuVVdIKGqBH4Xv3av5RF1L1Hoq0SqbUKGw1aw==",
+  "dgSpecHash": "Hu9CZ1kUhaf8z6cEarlSsgW+T+UsaJz3EULNOTVJFBIlsjmY0UU2fwSiBfc1lINFKFFDsV3LEBJiqY5+6Q6SxQ==",
   "success": true,
-  "projectFilePath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036.Android\\GraduationThesis4211036.Android.csproj",
+  "projectFilePath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036.Android\\GraduationThesis4211036.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nguye\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",

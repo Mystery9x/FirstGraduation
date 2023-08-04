@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v13.0": {
+    "MonoAndroid,Version=v11.0": {
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "dependencies": {
@@ -3590,7 +3590,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v13.0": [
+    "MonoAndroid,Version=v11.0": [
       "CommunityToolkit.Mvvm >= 8.2.1",
       "GraduationThesis4211036 >= 1.0.0",
       "Xamarin.Essentials >= 1.7.0",
@@ -3604,11 +3604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036.Android\\GraduationThesis4211036.Android.csproj",
+      "projectUniqueName": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036.Android\\GraduationThesis4211036.Android.csproj",
       "projectName": "GraduationThesis4211036.Android",
-      "projectPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036.Android\\GraduationThesis4211036.Android.csproj",
+      "projectPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036.Android\\GraduationThesis4211036.Android.csproj",
       "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036.Android\\obj\\",
+      "outputPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3620,24 +3620,24 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid13.0"
+        "monoandroid11.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid13.0": {
+        "monoandroid11.0": {
           "projectReferences": {
-            "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj": {
-              "projectPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj"
+            "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj": {
+              "projectPath": "D:\\TanTanWorking\\TotNghiep\\Project\\Final\\FirstGraduation\\RouteTracker\\GraduationThesis4211036\\GraduationThesis4211036.csproj"
             }
           }
         }
       }
     },
     "frameworks": {
-      "monoandroid13.0": {
+      "monoandroid11.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": {
             "target": "Package",
